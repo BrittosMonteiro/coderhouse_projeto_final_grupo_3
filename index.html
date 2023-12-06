@@ -1,52 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/style/global.css" />
+    <title>Home</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./src/style/global.css">
-  <title>Home</title>
-</head>
-
-<body>
-  <header class="header">
-    <div class="">
-      <img src="" alt="Logo do site" title="" class="" />
-      <nav>
-        <a href="index.html">INÍCIO</a>
-        <a href="./pages/contact/contact.html">CONTATO</a>
+  <body>
+    <header class="header">
+      <a href="index.html">
+        <img
+          src="./src/assets/logo.png"
+          alt="Logo do site"
+          title="Logo do site"
+          class="header__logo"
+        />
+      </a>
+      <nav class="header__nav">
+        <a href="index.html" class="nav__item">INÍCIO</a>
+        <a href="./pages/contact/contact.html" class="nav__item">CONTATO</a>
       </nav>
-    </div>
-    <form action="" method="" class="">
-      <input type="search" id="search_movie" class="" placeholder="Pesquisar filme" />
-    </form>
-  </header>
-  <main>
-    <section class="">
-      <img src="" alt="Capa do filme destaque" title="" class="" />
-      <span class="">Categoria do filme destaque</span>
-      <h1 class="">Título do filme destaque</h1>
-      <p class="">Sinopse do filme destaque</p>
-      <a href="">Direcionamento para a página do filme destaque</a>
-    </section>
-
-    <section class="">
-      <div class="">
-        <span class="">Categoria do filme</span>
-        <h2>Título do filme</h2>
-        <p>Sinopse do filme</p>
-        <a href="" class="">Direcionamento para pág. do filme</a>
-      </div>
-      <img src="" alt="Capa do filme" class="" />
+      <form action="" method="" class="header__form_search">
+        <input
+          type="search"
+          id="search_movie"
+          class="form_search__input_search"
+          placeholder="Pesquisar filme"
+        />
+        <i class="ph ph-magnifying-glass"></i>
+      </form>
+    </header>
+    <main>
+      <section class="highlight_movie">
+        <img
+          src="./src/assets/highlight_movie_cover.png"
+          alt="Capa do filme destaque - Velozes e Furiosos 10"
+          title="Capa do filme destaque - Velozes e Furiosos 10"
+          class="highlight_movie__cover-img"
+        />
+        <div class="highlight_movie__description">
+          <span class="highlight_movie__category">AÇÃO</span>
+          <h1 class="highlight_movie__title">VELOZES E FURIOSOS - X</h1>
+          <p class="highlight_movie__resume">
+            No décimo filme da série Velozes & Furiosos e último da nova
+            trilogia (Velozes 8, 9 e 10), ao longo de muitas missões e contra
+            probabilidades que pareciam impossíveis, Dom Toretto (Vin Diesel) e
+            sua família foram mais espertos e superaram todos os inimigos em seu
+            caminho. Agora, eles devem desafiar o adversário mais letal que já
+            enfrentaram...
+          </p>
+          <a href="" class="highlight_movie__learn_more">SAIBA+ AQUI</a>
+        </div>
+      </section>
 
       <!-- Esta segunda seção se repete mais 3 vezes. Tem-se 1 filme destaque e 4 outros filmes. -->
+      <hr />
+      <section class="movie_box">
+        <div class="movie_box__description">
+          <span class="movie_box__category">FICÇÃO CIENTÍFICA</span>
+          <h2 class="movie_box__title">INTERSTELLAR</h2>
+          <p class="movie_box__resume">
+            As reservas naturais da Terra estão chegando ao fim e um grupo de
+            astronautas recebe a missão de verificar possíveis planetas para
+            receberem a população mundial, possibilitando a continuação da
+            espécie. Cooper é chamado para liderar o grupo e aceita a missão
+            sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins
+            e Doyle, ele seguirá em busca de um novo lar.
+          </p>
+          <a href="" class="movie_box__learn_more">Continue lendo aqui</a>
+        </div>
+        <img
+          src="./src/assets/interstellar.png"
+          alt="Capa do filme Interstellar"
+          title="Capa do filme Interstellar"
+          class="movie_box__cover-img"
+        />
+      </section>
+    </main>
 
-    </section>
-  </main>
-  <footer class="">
-    <span class="">Projeto desenvolvido pelo grupo 3.</span>
-  </footer>
-</body>
-
+    <footer class="footer">
+      <span>Projeto desenvolvido pelo grupo 3.</span>
+    </footer>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+  </body>
 </html>
