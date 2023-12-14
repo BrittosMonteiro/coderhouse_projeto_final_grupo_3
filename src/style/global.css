@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import "./header.css";
-@import "./main.css";
 @import "./footer.css";
 
 * {
@@ -16,7 +15,7 @@
 
 :root {
   --background: #1d2633;
-  --white: #fff;
+  --white: #ebebeb;
   --off-white: #edebde;
   --dark-white: #d9d9d9;
   --red: #ac2828;
@@ -31,8 +30,46 @@ body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  min-height: 100vh;
 }
 
 input[type="submit"] {
   cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  gap: 40px;
+}
+
+.page_description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.page_title {
+  color: #ebebeb;
+  font-family: "Inter";
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.page_subtitle {
+  color: #ebebeb;
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+hr {
+  height: 1px;
+  background-color: var(--dark-white);
 }
