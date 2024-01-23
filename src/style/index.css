@@ -45,6 +45,12 @@
   font-weight: 600;
 }
 
+.movie_list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .movie_box {
   width: 100%;
   display: flex;
@@ -83,6 +89,7 @@
   color: var(--white);
 }
 .movie_box__cover-img {
-  width: 500;
+  width: 500px;
   height: 350px;
+  border-radius: 4px;
 }
