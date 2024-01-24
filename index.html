@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./src/assets/logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/logo.png"
+      type="image/x-icon"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,9 +33,14 @@
         <a href="./index.html" class="nav__item">INÍCIO</a>
         <a href="./pages/contact/contact.html" class="nav__item">CONTATO</a>
       </nav>
-      <form action="" method="" class="header__form_search">
+      <form
+        action="./pages/search/search.html"
+        method="GET"
+        class="header__form_search"
+      >
         <input
           type="search"
+          name="search_movie"
           id="search_movie"
           class="form_search__input_search"
           placeholder="Pesquisar filme"
@@ -39,108 +48,13 @@
         <i class="ph ph-magnifying-glass"></i>
       </form>
     </header>
-    <main>
-      <section class="highlight_movie">
-        <img
-          src="./src/assets/highlight_movie_cover.png"
-          alt="Capa do filme destaque - Velozes e Furiosos 10"
-          title="Capa do filme destaque - Velozes e Furiosos 10"
-          class="highlight_movie__cover-img"
-        />
-        <div class="highlight_movie__description">
-          <span class="highlight_movie__category">AÇÃO</span>
-          <h1 class="highlight_movie__title">VELOZES E FURIOSOS - X</h1>
-          <p class="highlight_movie__resume">
-            No décimo filme da série Velozes & Furiosos e último da nova
-            trilogia (Velozes 8, 9 e 10), ao longo de muitas missões e contra
-            probabilidades que pareciam impossíveis, Dom Toretto (Vin Diesel) e
-            sua família foram mais espertos e superaram todos os inimigos em seu
-            caminho. Agora, eles devem desafiar o adversário mais letal que já
-            enfrentaram.
-          </p>
-          <a href="" class="highlight_movie__learn_more">SAIBA+ AQUI</a>
-        </div>
-      </section>
-
-      <hr />
-      <section class="movie_box">
-        <div class="movie_box__description">
-          <span class="movie_box__category">FICÇÃO CIENTÍFICA</span>
-          <h2 class="movie_box__title">INTERSTELLAR</h2>
-          <p class="movie_box__resume">
-            As reservas naturais da Terra estão chegando ao fim e um grupo de
-            astronautas recebe a missão de verificar possíveis planetas para
-            receberem a população mundial, possibilitando a continuação da
-            espécie. Cooper é chamado para liderar o grupo e aceita a missão
-            sabendo que pode nunca mais ver os filhos. Ao lado de Brand, Jenkins
-            e Doyle, ele seguirá em busca de um novo lar.
-          </p>
-          <a href="" class="movie_box__learn_more">Continue lendo aqui</a>
-        </div>
-        <img
-          src="./src/assets/interstellar.jpg"
-          alt="Capa do filme Interstellar"
-          title="Capa do filme Interstellar"
-          class="movie_box__cover-img"
-        />
-      </section>
-
-      <section class="movie_box">
-        <div class="movie_box__description">
-          <span class="movie_box__category">ANIMAÇÃO</span>
-          <h2 class="movie_box__title">ELEMENTOS</h2>
-          <p class="movie_box__resume">
-            Elementos da Disney e Pixar, é um longa-metragem original que se passa na Cidade Elemento, um lugar onde os habitantes do fogo, água, terra e ar vivem em harmonia. A história apresenta Faísca, uma jovem impetuosa, cuja amizade com Gota, um garoto sentimental, divertido e que segue o fluxo das coisas, desafia suas crenças sobre o mundo no qual vivem.
-          </p>
-          <a href="" class="movie_box__learn_more">Continue lendo aqui</a>
-        </div>
-        <img
-          src="./src/assets/elementos.jpeg"
-          alt="Capa do filme Elementos"
-          title="Capa do filme Elementos"
-          class="movie_box__cover-img"
-        />
-      </section>
-
-      <section class="movie_box">
-        <div class="movie_box__description">
-          <span class="movie_box__category">COMÉDIA</span>
-          <h2 class="movie_box__title">MISTÉRIO EM PARIS</h2>
-          <p class="movie_box__resume">
-            Mistério em Paris é a sequência de Mistério no Mediterrâneo. Depois dos eventos do primeiro longa, Nick e Audrey sofrem com o fracasso da agência de investigações que eles abriram. Agora detetives profissionais e em tempo integral, tentando fazer a agência de investigação ficar mais popular, dessa vez uma viagem para Paris cai no colo do casal. Quando tudo parece estar desandando de vez, o amigo em comum Maharajah entra em contato.
-          </p>
-          <a href="" class="movie_box__learn_more">Continue lendo aqui</a>
-        </div>
-        <img
-          src="./src/assets/misterio_em_paris.jpg"
-          alt="Capa do filme Mistério em Paris"
-          title="Capa do filme Mistério em Paris"
-          class="movie_box__cover-img"
-        />
-      </section>
-
-      <section class="movie_box">
-        <div class="movie_box__description">
-          <span class="movie_box__category">TERROR</span>
-          <h2 class="movie_box__title">FERIADO SANGRENTO</h2>
-          <p class="movie_box__resume">
-            É um filme norte-americano de terror baseado em um trailer satírico de Roth exibido durante o filme Grindhouse (2007). Em Feriado Sangrento, um assassino em série chega em Massachusetts para criar uma escultura de Ação de Graças com os corpos dos moradores da cidade. Sinopse oficial não divulgada.
-          </p>
-          <a href="" class="movie_box__learn_more">Continue lendo aqui</a>
-        </div>
-        <img
-          src="./src/assets/feriado_sangrento.jpg"
-          alt="Capa do filme Feriado Sangrento"
-          title="Capa do filme Feriado Sangrento"
-          class="movie_box__cover-img"
-        />
-      </section>
-
-    </main>
+    <main id="main"></main>
 
     <footer class="footer">
       <span>Projeto desenvolvido pelo grupo 3.</span>
     </footer>
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    <script src="./src/scripts/fetchHighlightMovie.js" type="module"></script>
+    <script src="./src/scripts/fetchPopularMovie.js" type="module"></script>
   </body>
 </html>
