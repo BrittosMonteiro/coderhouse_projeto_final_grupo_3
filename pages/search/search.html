@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../src/style/global.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Pesquisar</title>
   </head>
   <body>
@@ -27,9 +28,10 @@
         <a href="../../index.html" class="nav__item">INÍCIO</a>
         <a href="../contact/contact.html" class="nav__item">CONTATO</a>
       </nav>
-      <form action="" method="" class="header__form_search">
+      <form action="./search.html" method="GET" class="header__form_search">
         <input
           type="search"
+          name="search_movie"
           id="search_movie"
           class="form_search__input_search"
           placeholder="Pesquisar filme"
@@ -39,25 +41,21 @@
     </header>
     <main>
       <div class="">
-        <h1 class="">PESQUISA</h1>
-        <span
+        <h1 class="page_title">PESQUISA</h1>
+        <span class="page_subtitle"
           >Sua pesquisa por "<span id="search_therm"></span>"
           <span id="search_therm_result"></span
         ></span>
       </div>
+
       <!-- Sessão com os filmes encontrados -->
-      <section class="">
-        <!-- Item que será repetido a cada filme encontrado -->
-        <div class="movie">
-          <img class="movie_cover" />
-          <a href="" class="movie_link"></a>
-        </div>
-      </section>
+      <section class="search_list_movies"></section>
     </main>
 
     <footer class="footer">
       <span>Projeto desenvolvido pelo grupo 3.</span>
     </footer>
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    <script src="./../../src/scripts/searchMovie.js"></script>
   </body>
 </html>
