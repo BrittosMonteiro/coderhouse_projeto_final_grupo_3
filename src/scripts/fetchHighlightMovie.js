@@ -1,27 +1,6 @@
+import { API_FULL_ROUTE, DEFAULT_LANGUAGE, options } from "./config.js";
+
 window.addEventListener("DOMContentLoaded", () => {
-  const API_ROUTE = "https://api.themoviedb.org";
-
-  // VERSÃO ATUAL ESTÁVEL DA API
-  const API_VERSION = "/3";
-
-  // CONCATENAÇÃO DO LINK DA API COM A VERSÃO ESTÁVEL
-  const API_FULL_ROUTE = API_ROUTE + API_VERSION;
-
-  // CHAVE NECESSÁRIA PARA FAZER A REQUISIÇÃO (FETCH, REQUEST, RESPONSE)
-  const API_KEY =
-    "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyNDUxNzRkMzcwMGM1YWFiZjIzNWQ2ZDhjZWY1MTQwMyIsInN1YiI6IjY1ODJkMjUyYjM0NDA5NDZlMDFhZWJjOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3dqemApaRhZuCyX64_RySFq0XePhbyiTtx3RNUVhu08";
-
-  // IDIOMA PADRÃO DOS DADOS RETORNADOS PELA API
-  const DEFAULT_LANGUAGE = "pt-BR";
-
-  const options = {
-    method: "GET",
-    headers: {
-      accept: "application/json",
-      Authorization: `Bearer ${API_KEY}`,
-    },
-  };
-
   // FILMES EM DESTAQUE NA SEMANA
   function getHighlightMovie() {
     fetch(
@@ -68,7 +47,10 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const highlight_cover = document.createElement("img");
     highlight_cover.classList.add("highlight_movie__cover-img");
-    highlight_cover.setAttribute('src', `https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`)
+    highlight_cover.setAttribute(
+      "src",
+      `https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`
+    );
 
     const highlight_description = document.createElement("div");
     highlight_description.classList.add("highlight_movie__description");
