@@ -92,6 +92,7 @@
   width: 500px;
   height: 350px;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .page_title {
