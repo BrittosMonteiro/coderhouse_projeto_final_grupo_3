@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  line-height: 25px;
 }
 .highlight_movie__category {
   display: flex;
@@ -67,6 +68,7 @@
 }
 .movie_box__description {
   gap: 16px;
+  line-height: 25px;
 }
 .movie_box__category {
   padding: 8px 16px;
@@ -81,6 +83,8 @@
 .movie_box__title {
   color: var(--white);
   font-size: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .movie_box__resume {
   color: var(--white);
@@ -93,8 +97,9 @@
   color: var(--white);
 }
 .movie_box__cover-img {
-  width: 500px;
-  height: 350px;
+  max-width: 250px;
+  width: auto;
+  height: auto;
   border-radius: 4px;
   object-fit: cover;
 }
