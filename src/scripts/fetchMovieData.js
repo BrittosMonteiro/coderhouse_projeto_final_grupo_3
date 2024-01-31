@@ -14,7 +14,6 @@ function getMovieData(movie_id) {
 }
 
 function buildElement(movie) {
-  console.log(movie);
   const main = document.getElementById("main");
 
   // CRIA OS ELEMENTOS
@@ -35,16 +34,6 @@ function buildElement(movie) {
   const movie_script = document.createElement("p");
   const movie_cast = document.createElement("p");
   const trailer = document.createElement("iframe");
-
-  movie_details.append(movie_cover, movie_full_description);
-  movie_trailer.append(movie_subtitle_trailer, trailer);
-
-  movie_full_description.append(
-    movie_category,
-    movie_release_year,
-    movie_length,
-    movie_description
-  );
 
   // DEFINE OS ESTILOS
   movie_title.classList.add("page_title");
@@ -71,11 +60,13 @@ function buildElement(movie) {
     "src",
     `https://image.tmdb.org/t/p/w780/${movie.poster_path}`
   );
-  movie_category.innerText = `${movie.genres[1].name}`;
+  if (movie.genres.length > 0) {
+    movie_category.innerText = `${movie.genres[0].name}`;
+  }
   movie_release_year.innerText = `Ano: ${new Date().getFullYear(
     movie.release_date
   )}`;
-  movie_length.innerText = `${movie.runtime} minutos`;
+  movie_length.innerText = `Duração: ${movie.runtime} minutos`;
   movie_description.innerText = movie.overview
     ? movie.overview
     : "SEM DESCRIÇÃO";
@@ -99,6 +90,19 @@ function buildElement(movie) {
   }
 
   // EXIBE NA TELA
+  movie_details.append(movie_cover, movie_full_description);
+  movie_trailer.append(movie_subtitle_trailer, trailer);
+
+  if (movie.genres.length > 0) {
+    movie_full_description.append(movie_category);
+  }
+
+  movie_full_description.append(
+    movie_release_year,
+    movie_length,
+    movie_description
+  );
+
   main.append(movie_title, movie_details);
   if (movie.videos.results.length > 0) {
     main.append(movie_trailer);
