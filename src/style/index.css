@@ -68,14 +68,14 @@
 .movie_box__description {
   gap: 16px;
 }
-.movie_box__category {
+.movie_box__new_title {
   padding: 8px 16px;
   border-radius: 12px;
   background-color: var(--red);
   color: var(--white);
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
 }
 .movie_box__title {
