@@ -42,8 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // CRIA O ELEMENTO
   function buildHighlightMovie(movie) {
-    const highlight_movie = document.createElement("section");
-    highlight_movie.classList.add("highlight_movie");
+    const highlight_movie = document.getElementById("highlight_movie");
 
     const highlight_cover = document.createElement("img");
     highlight_cover.classList.add("highlight_movie__cover-img");
@@ -56,8 +55,8 @@ window.addEventListener("DOMContentLoaded", () => {
     highlight_description.classList.add("highlight_movie__description");
 
     const highlight_category = document.createElement("span");
-    highlight_category.classList.add("highlight_movie__category");
-    highlight_category.innerText = "";
+    highlight_category.classList.add("movie_box__new_title");
+    highlight_category.innerText = movie.title;
 
     const highlight_title = document.createElement("h1");
     highlight_title.classList.add("highlight_movie__title");
@@ -75,11 +74,7 @@ window.addEventListener("DOMContentLoaded", () => {
       `pages/movie/movie.html?id=${movie.id}`
     );
 
-    highlight_description.append(
-      highlight_category,
-      highlight_title,
-      highlight_resume
-    );
+    highlight_description.append(highlight_category, highlight_resume);
     highlight_description.append(highlight_link);
     highlight_movie.append(highlight_cover, highlight_description);
     return highlight_movie;
