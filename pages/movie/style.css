@@ -59,6 +59,7 @@
   color: var(--white);
   padding: 8px;
   border-radius: 4px;
+  width: -moz-fit-content;
   width: fit-content;
   font-weight: 600;
 }

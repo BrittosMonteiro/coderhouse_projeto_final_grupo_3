@@ -15,6 +15,7 @@
   display: flex;
   padding: 8px 16px;
   background-color: var(--red);
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 18px;
   font-weight: 600;
@@ -31,6 +32,7 @@
   font-weight: 400;
 }
 .highlight_movie__learn_more {
+  width: -moz-fit-content;
   width: fit-content;
   color: var(--white);
   transition: 0.25s;
@@ -71,6 +73,7 @@
   border-radius: 12px;
   background-color: var(--red);
   color: var(--white);
+  width: -moz-fit-content;
   width: fit-content;
   font-size: 18px;
   font-weight: 600;
@@ -85,6 +88,7 @@
   font-weight: 400;
 }
 .movie_box__learn_more {
+  width: -moz-fit-content;
   width: fit-content;
   color: var(--white);
 }
