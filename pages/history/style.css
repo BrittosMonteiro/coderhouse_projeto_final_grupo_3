@@ -1,9 +1,3 @@
 body {
   background-color: var(--white);
 }
-
-@media screen and (min-width: 768px) {
-  .form_row {
-    flex-direction: row;
-  }
-}

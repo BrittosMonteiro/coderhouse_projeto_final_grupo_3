@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="../../src/style/global.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../src/style/mobile.css" />
     <title>Filme</title>
   </head>
 
@@ -30,10 +31,14 @@
         />
       </a>
       <nav class="header__nav">
-        <a href="../../index.html" class="nav__item">INÍCIO</a>
-        <a href="../contact/contact.html" class="nav__item">CONTATO</a>
-        <a href="../history/history.html" class="nav__item">HISTÓRIA DO CINEMA</a>
+        <ul class="nav__list">
+        <li><a href="../../index.html" class="nav__item">INÍCIO</a></li>
+        <li><a href="./contact.html" class="nav__item">CONTATO</a></li>
+        <li><a href="../history/history.html" class="nav__item">HISTÓRIA DO CINEMA</a></li>
+        <li></li>
+        </ul>
       </nav>
+
       <form
         action="./../search/search.html"
         method="GET"
@@ -48,6 +53,12 @@
         />
         <i class="ph ph-magnifying-glass"></i>
       </form>
+
+      <div class="mobile__menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </header>
 
     <main>
@@ -86,5 +97,6 @@
       <span class="">Projeto desenvolvido pelo grupo 3</span>
     </footer>
     <script src="./../../src/scripts/fetchMovieData.js" type="module"></script>
+    <script src="../../src/scripts/mobile-navbar.js"></script>
   </body>
 </html>
