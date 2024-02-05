@@ -43,10 +43,11 @@
 }
 
 .movie_description {
+  padding-top: 25px;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 25px;
 }
 
 .movie_trailer {
