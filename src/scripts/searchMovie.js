@@ -3,6 +3,12 @@ import { API_FULL_ROUTE, DEFAULT_LANGUAGE, options } from "./config.js";
 window.addEventListener("DOMContentLoaded", () => {
   const search_movie = window.location.search.split("=")[1];
 
+  if (search_movie) {
+    const display_search_movie = document.getElementById("search_therm");
+    display_search_movie.innerText = search_movie;
+    searchMovie();
+  }
+
   function searchMovie() {
     fetch(
       `${API_FULL_ROUTE}/search/movie?query=${search_movie}&include_adult=false&language=${DEFAULT_LANGUAGE}&page=1`,
@@ -27,12 +33,6 @@ window.addEventListener("DOMContentLoaded", () => {
       .catch((err) => console.error(err));
   }
 
-  if (search_movie) {
-    const display_search_movie = document.getElementById("search_therm");
-    display_search_movie.innerText = search_movie;
-    searchMovie();
-  }
-
   function buildMovieCard(movie) {
     const movie_card = document.createElement("div");
     movie_card.classList.add("movie");
@@ -45,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const movie_link = document.createElement("a");
     movie_link.classList.add("movie_link");
-    movie_link.href = "#";
+    movie_link.href = `../movie/movie.html?id=${movie.id}`;
     movie_link.innerText = `${movie.title} (${new Date().getFullYear(
       movie.release_date
     )})`;

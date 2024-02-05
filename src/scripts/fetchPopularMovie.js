@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
       .then((response) => {
         if (response.results.length > 0) {
           const main = document.getElementById("main");
-          const movie_list = document.createElement("section");
+          const movie_list = document.getElementById("movie_list");
           movie_list.classList.add("movie_list");
 
           response.results.forEach((movie, index) => {
@@ -40,8 +40,8 @@ window.addEventListener("DOMContentLoaded", () => {
     description.classList.add("movie_box__description");
 
     const category = document.createElement("span");
-    category.classList.add("movie_box__category");
-    category.innerText = "";
+    category.classList.add("movie_box__new_title");
+    category.innerText = movie.title;
 
     const title = document.createElement("h2");
     title.classList.add("movie_box__title");
@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", () => {
       `https://image.tmdb.org/t/p/w780/${movie.poster_path}`
     );
 
-    description.append(category, title, resume, link);
+    description.append(category, resume, link);
     box.append(description, cover);
 
     return box;
