@@ -12,15 +12,17 @@ window.addEventListener("DOMContentLoaded", () => {
         if (response.results.length > 0) {
           const main = document.getElementById("main");
           const movie_list = document.getElementById("movie_list");
+          movie_list.classList.add("movie_list");
 
-          response.results.map((movie, index) => {
-            if (!movie.overview) return;
+          response.results.forEach((movie, index) => {
             const movie_box = buildMovieBox(movie);
+            if(movie_box) {
             movie_list.append(movie_box);
             const hr = document.createElement("hr");
             if (index < response.results.length - 1) {
               movie_list.append(hr);
             }
+          }
           });
           main.append(movie_list);
         }
@@ -30,6 +32,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // CRIA O ELEMENTO
   function buildMovieBox(movie) {
+    if (movie.title.length > 0 && movie.overview.length > 0 && movie.poster_path.length > 0) {
     const box = document.createElement("section");
     box.classList.add("movie_box");
 
@@ -64,6 +67,7 @@ window.addEventListener("DOMContentLoaded", () => {
     box.append(description, cover);
 
     return box;
+    }
   }
 
   getMovies();
