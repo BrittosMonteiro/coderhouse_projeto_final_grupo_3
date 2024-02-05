@@ -11,9 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../../src/style/global.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="../../src/style/mobile.css" />
-    <title>Pesquisar</title>
+    <title>Contato</title>
   </head>
   <body>
     <header class="header">
@@ -28,13 +28,16 @@
       <nav class="header__nav">
         <ul class="nav__list">
         <li><a href="../../index.html" class="nav__item">INÍCIO</a></li>
-        <li><a href="./contact.html" class="nav__item">CONTATO</a></li>
+        <li><a href="../contact/contact.html" class="nav__item">CONTATO</a></li>
         <li><a href="../history/history.html" class="nav__item">HISTÓRIA DO CINEMA</a></li>
         <li></li>
         </ul>
       </nav>
-
-      <form action="./search.html" method="GET" class="header__form_search">
+      <form
+        action="./../search/search.html"
+        method="GET"
+        class="header__form_search"
+      >
         <input
           type="search"
           name="search_movie"
@@ -51,24 +54,12 @@
         <div class="line3"></div>
       </div>
     </header>
-    <main>
-      <div class="">
-        <h1 class="page_title">PESQUISA</h1>
-        <span class="page_subtitle"
-          >Sua pesquisa por "<span id="search_therm"></span>"
-          <span id="search_therm_result"></span
-        ></span>
-      </div>
 
-      <!-- Sessão com os filmes encontrados -->
-      <section class="search_list_movies"></section>
-    </main>
 
     <footer class="footer">
       <span>Projeto desenvolvido pelo grupo 3.</span>
     </footer>
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
-    <script src="./../../src/scripts/searchMovie.js" type="module"></script>
     <script src="../../src/scripts/mobile-navbar.js"></script>
   </body>
 </html>
