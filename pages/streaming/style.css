@@ -1,0 +1,17 @@
+.page_subtitle{
+    line-height: 25px;
+}
+
+.streaming_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.streaming_logo{
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+}
