@@ -10,21 +10,11 @@ text-align: center;
 font-size: 30px;
 }
 
-.image-inicio {
-  width: 1000px;
-  object-fit: contain;
-  display: flex;
-}
-
-.image-cine {
-  text-align: center;
-  width: 100%;
-}
-
 .titulo-descrição {
 text-align: center;
 color: var(--gray);
 line-height: 20px;
+margin-top: 10px;
 }
 
 .titulo-noticia {
@@ -38,14 +28,12 @@ line-height: 20px;
   width: 100%;
   padding: 20px;
   line-height: 20px;
-  box-sizing:border-box;
 }
 
 .texto01{
 color: var(--white);
-display: flex;
-text-align: center;
-margin-top: 20px;
+margin-top: 30px;
+line-height: 20px;
 }
 
 .box-destaque {
@@ -71,4 +59,45 @@ line-height: 20px;
 
 .informação {
 color: var(--white);
+}
+
+.texto02{
+  color: var(--white);
+  margin-top: 20px;
+  line-height: 20px;
+  }
+
+.sub-texto02 {
+color: var(--gray);
+line-height: 20px;
+text-align: center;
+}
+
+.trailer {
+  width: 100%;
+  height: 80vh;
+  margin-top: 30px;
+}
+
+.imagem-charlie {
+  justify-content: center;
+  display: flex;
+  
+}
+
+.titulo-charlie {
+  text-align: center;
+  color: var(--white);
+  margin-top: 10px;
+  line-height: 20px;
+  font-size: 30px;
+}
+
+.imagem-charlie {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.informação {
+  margin-top: 20px;
 }
