@@ -2,6 +2,7 @@
 
 body {
   background-color: var(--background);
+  font-family: "Inter", sans-serif;
 }
 
 .titulo-cine {
@@ -39,7 +40,7 @@ line-height: 20px;
 .box-destaque {
   display: flex;
   gap: 10px;
-  margin-top: 50px;
+  padding: 20px;
 }
 
 .imagem-destaque {
@@ -52,7 +53,7 @@ color: var(--white);
 line-height: 35px;
 }
 
-.sub-titulo {
+.sub-titulo-imagem {
 color: var(--gray);
 line-height: 20px;
 }
@@ -100,4 +101,24 @@ text-align: center;
 
 .informação {
   margin-top: 20px;
+}
+
+.sub-imagem {
+text-align: center;
+color: var(--gray);
+line-height: 20px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: var(--gray);
 }
